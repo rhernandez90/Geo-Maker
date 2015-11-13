@@ -8,7 +8,7 @@
  * Controller of the angularApp
  */
 angular.module('angularApp')
-  .controller('MapaCtrl', function ($scope) {
+  .controller('MapaCtrl', function ($scope,leafletData) {
 
 
             angular.extend($scope, {

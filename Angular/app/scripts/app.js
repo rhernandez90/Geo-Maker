@@ -8,8 +8,7 @@
  *
  * Main module of the application.
  */
-angular
-  .module('angularApp', [
+angular.module('angularApp', [
     'ngAnimate',
     'ngRoute',
     'leaflet-directive'

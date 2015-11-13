@@ -12,6 +12,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/VerticalNavBar.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
     <!-- endbuild -->
   </head>
@@ -21,42 +22,52 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+
+    <div class="">
+
+    </div>
+
+
+    <div class="container-fluid">
+      <div class="col-md-3">
+
+
+        <nav class="navbar navbar-default" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-
-            <a class="navbar-brand" href="#/">angular</a>
+            <a class="navbar-brand" href="#">Brand</a>
           </div>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
+              <li class="active"><a ng-href="#/mapa">Mapa</a></li>
+              <li><a href="#/">Home</a></li>
               <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/mapa">Mapa</a></li>
             </ul>
-          </div>
+
+          </div><!-- /.navbar-collapse -->
+        </nav>
+
+      </div>
+      <div class="col-md-9">
+        <div class="container">
+          <div ng-view=""></div>
         </div>
       </div>
+
     </div>
 
-    <div class="container">
-    <div ng-view=""></div>
-    </div>
 
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
+
+
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -88,6 +99,7 @@
 
         <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
         <script src="http://tombatossals.github.io/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
+    
         <script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
         <script src="bower_components/angular-leaflet-directive/dist/google.js"></script>
         <script src="bower_components/angular-leaflet-directive/dist/Bing.js"></script>
@@ -98,6 +110,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/mapa.js"></script>
+        <script src="scripts/controllers/controller1.js"></script>
         <!-- endbuild -->
 </body>
 </html>
