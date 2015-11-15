@@ -1,2 +1,2 @@
 # Geo-Maker
-Creador de Geocercas Angular - leaflet
+Creador de Geocercas Angular - leaflet and FireBase
