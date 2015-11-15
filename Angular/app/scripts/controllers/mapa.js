@@ -8,7 +8,45 @@
  * Controller of the angularApp
  */
 angular.module('angularApp')
-  .controller('MapaCtrl', function ($scope,leafletData,$uibModal,$log) {
+  .controller('MapaCtrl', function ($scope,leafletData,$uibModal,$log,firebase,$firebaseArray) {
+
+
+    $scope.geocercas = $firebaseArray(firebase);
+
+    $scope.geojson = {
+      data: []
+    };
+
+
+
+    firebase.on("value", function(snapshot) {
+      $scope.geojson.data = [];
+
+
+      angular.forEach(snapshot.val(), function(value,key) {
+        $scope.geojson.data.push(  JSON.parse(value.geoPuntos));
+
+
+
+      });
+
+
+      console.log( $scope.geojson.data);
+
+    }, function (errorObject) {
+      console.log("The read failed: " + errorObject.code);
+    });
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -130,7 +168,7 @@ angular.module('angularApp').controller('ModalInstanceCtrl', function ($scope, $
 
 
   $scope.ok = function () {
-    //$uibModalInstance.close($scope.selected.item);
+    //
     var tmpObj = {
       nombre : $scope.nombre,
       geoPuntos: $scope.geoPuntos
@@ -138,6 +176,7 @@ angular.module('angularApp').controller('ModalInstanceCtrl', function ($scope, $
 
         var res = firebase.push(tmpObj)
         console.log(res);
+        $uibModalInstance.close('close');
 
 
 
