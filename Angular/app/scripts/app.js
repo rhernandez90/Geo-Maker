@@ -11,7 +11,9 @@
 angular.module('angularApp', [
     'ngAnimate',
     'ngRoute',
-    'leaflet-directive'
+    'leaflet-directive',
+    'ui.bootstrap',
+    'firebase'
   ])
   .config(function ($routeProvider) {
     $routeProvider

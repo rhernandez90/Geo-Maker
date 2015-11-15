@@ -8,12 +8,16 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
+    <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.draw.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/VerticalNavBar.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+
+
     <!-- endbuild -->
   </head>
   <body ng-app="angularApp">
@@ -28,7 +32,7 @@
 
     </div>
 
-
+    <br/>
     <div class="container-fluid">
       <div class="col-md-3">
 
@@ -57,19 +61,13 @@
         </nav>
 
       </div>
-      <div class="col-md-9">
+      <div class="col-md-8">
         <div class="container">
           <div ng-view=""></div>
         </div>
       </div>
 
     </div>
-
-
-
-
-
-
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
@@ -83,34 +81,44 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <link href="../bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
+    <script src="http://tombatossals.github.io/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
+    <script src="bower_components/leaflet/dist/leaflet.draw.js"></script>
+
+    <script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+    <script src="../bower_components/angular-leaflet-directive/dist/google.js"></script>
+    <script src="../bower_components/angular-leaflet-directive/dist/Bing.js"></script>
+
+
+    <script src="../bower_components/firebase/firebase.js"></script>
+    <script src="../bower_components/angularfire/dist/angularfire.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
 
 
-
-
-
-
-        <script src="bower_components/angular/angular.js"></script>
-        <script src="bower_components/angular-animate/angular-animate.js"></script>
-        <script src="bower_components/angular-route/angular-route.js"></script>
-
-        <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
-        <script src="http://tombatossals.github.io/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
-    
-        <script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
-        <script src="bower_components/angular-leaflet-directive/dist/google.js"></script>
-        <script src="bower_components/angular-leaflet-directive/dist/Bing.js"></script>
-        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
-
-
+      <!-- Latest compiled and minified JavaScript -->
         <script src="scripts/app.js"></script>
+
+        <script src="scripts/services/firebase.js"></script>
+
+
+
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/mapa.js"></script>
         <script src="scripts/controllers/controller1.js"></script>
+        <script src="scripts/services/firebase.js"></script>
         <!-- endbuild -->
 </body>
 </html>
