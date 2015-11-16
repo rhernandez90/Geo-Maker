@@ -2,6 +2,8 @@
   "name": "angular",
   "private": true,
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.10.1",
     "grunt-karma": "*",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "2.3.1",
@@ -26,11 +28,11 @@
     "karma-jasmine": "*",
     "karma-phantomjs-launcher": "*",
     "lazypipe": "^0.2.4",
+    "leaflet": "*",
     "open": "0.0.5",
     "rimraf": "^2.4.0",
     "run-sequence": "^1.1.1",
-    "wiredep": "^2.2.2",
-	"leaflet":"*"
+    "wiredep": "^2.2.2"
   },
   "engines": {
     "node": ">=0.10.0"
